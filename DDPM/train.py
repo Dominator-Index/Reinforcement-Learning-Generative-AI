@@ -72,7 +72,7 @@ if __name__ == "__main__":
     print("Start training DDPMs...")
     diffusion.train()
 
-    epochs = epochs - 77
+    epochs = epochs
     for epoch in range(epochs):
         noise_prediction_loss = 0
         for batch_idx, (x, _) in tqdm(enumerate(train_loader), total=len(train_loader)):
@@ -94,8 +94,8 @@ if __name__ == "__main__":
         with torch.no_grad():
             generated_images = diffusion.sample(1)
             
-            save_model(diffusion, epoch + 77)
-        show_image(generated_images, idx=0, epoch=epoch + 77)
+            save_model(diffusion, epoch)
+        show_image(generated_images, idx=0, epoch=epoch)
         diffusion.train()
 
         print("\tEpoch", epoch + 1, "complete!", "\tDenoising Loss: ", noise_prediction_loss / batch_idx)
