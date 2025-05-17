@@ -1,0 +1,24 @@
+# @package _global_
+partition: "gpu"  # 设置为 GPU 分区
+
+defaults:
+  - override /hydra/launcher: submitit_slurm  # 保留原有的提交配置
+
+hydra:
+  launcher:
+    partition: "gpu"  # 使用 GPU 分区
+    gpus_per_task: 1   # 每个任务分配一个 GPU（可以根据需要调整）
+    cpus_per_task: 4   # 设置每个任务使用的 CPU 核心数（可以根据 GPU 的负载来调整）
+    mem_gb: 16         # 设置每个任务的内存大小（可以根据需要调整）
+    timeout_min: 100   # 设置任务的最大执行时间
+    array_parallelism: 64  # 设置并行任务数量
+    setup:
+      - "module purge"  # 清除集群环境模块
+      - "module load miniconda/3"  # 加载 conda 环境
+      - "conda activate myenv"  # 激活 conda 环境
+
+  # 使用 GPU 进行训练
+  trainer:
+    accelerator: "gpu"  # 设置为 GPU
+    devices: 1          # 使用一个 GPU（如果有多个 GPU，可以设置为更大的值）
+    max_epochs: 10      # 设置最大训练周期，可以根据需要调整

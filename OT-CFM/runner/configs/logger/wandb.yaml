@@ -1,0 +1,20 @@
+# https://wandb.ai
+
+paths:
+  output_dir: "/home/nkd/ouyangzl/conditional-flow-matching/wandb_log"  # 设置为你想要的绝对路径
+
+wandb:
+  _target_: pytorch_lightning.loggers.wandb.WandbLogger
+  save_dir: "${paths.output_dir}"  # 使用你设置的路径
+  offline: False
+  id: null
+  anonymous: null
+  project: "conditional-flow-model"
+  log_model: False
+  prefix: ""
+  entity: "bxl307-university-of-birmingham"  # 替换为你的 W&B 实体名
+  group: ""
+  tags: []
+  job_type: ""
+
+
