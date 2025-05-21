@@ -1,0 +1,9 @@
+[2025-05-21 13:33:37,151][__main__][INFO] - Data collection starts!
+[2025-05-21 13:33:39,567][__main__][INFO] - Collected 621 valid episodes
+[2025-05-21 13:33:39,567][__main__][INFO] - Data collection finished!
+[2025-05-21 13:33:39,568][__main__][INFO] - Transforming list to numpy array...
+[2025-05-21 13:33:39,611][__main__][INFO] - Data processing finished!
+[2025-05-21 13:33:39,872][__main__][INFO] - obs_dim = 59, act_dim = 9
+[2025-05-21 13:33:39,873][__main__][INFO] - Building models...
+[2025-05-21 13:33:40,247][__main__][INFO] - Creating agent...
+[2025-05-21 13:33:43,935][OpenGL.acceleratesupport][INFO] - No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'

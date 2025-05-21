@@ -1,0 +1,28 @@
+[2025-05-21 13:45:31,716][__main__][INFO] - Data collection starts!
+[2025-05-21 13:45:34,111][__main__][INFO] - Collected 621 valid episodes
+[2025-05-21 13:45:34,111][__main__][INFO] - Data collection finished!
+[2025-05-21 13:45:34,112][__main__][INFO] - Transforming list to numpy array...
+[2025-05-21 13:45:34,154][__main__][INFO] - Data processing finished!
+[2025-05-21 13:45:34,411][__main__][INFO] - obs_dim = 59, act_dim = 9
+[2025-05-21 13:45:34,413][__main__][INFO] - Building models...
+[2025-05-21 13:45:34,788][__main__][INFO] - Creating agent...
+[2025-05-21 13:46:20,161][__main__][INFO] - Max logp: tensor([[199.8616],
+        [203.0988],
+        [301.8939],
+        [299.1075],
+        [ 66.6381],
+        [237.1983],
+        [120.3244],
+        [ 99.5801],
+        [199.7305],
+        [274.2146]], device='cuda:0')
+[2025-05-21 13:46:30,982][__main__][INFO] - Max logp: tensor([[146.0836],
+        [ 50.8667],
+        [146.5306],
+        [268.8200],
+        [205.0581],
+        [204.2621],
+        [282.4967],
+        [244.3332],
+        [236.8999],
+        [117.1242]], device='cuda:0')

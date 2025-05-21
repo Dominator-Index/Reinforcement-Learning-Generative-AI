@@ -1,0 +1,34 @@
+pipeline_name: adaptdiffuser_d4rl_kitchen
+mode: video
+seed: 0
+device: cuda:0
+discount: 0.997
+solver: ddpm
+model_dim: 64
+diffusion_steps: 20
+sampling_steps: 20
+predict_noise: false
+action_loss_weight: 10.0
+ema_rate: 0.9999
+diffusion_gradient_steps: 1000000
+classifier_gradient_steps: 1000000
+batch_size: 64
+log_interval: 1000
+save_interval: 100000
+ft_ckpt: latest
+ckpt: latest
+num_envs: 50
+num_episodes: 3
+num_candidates: 64
+temperature: 0.5
+use_ema: true
+task:
+  env_name: D4RL-kitchen-complete-v2
+  dim_mult:
+  - 1
+  - 2
+  - 2
+  - 2
+  w_cg: 0.01
+  horizon: 32
+  metric_value: 380

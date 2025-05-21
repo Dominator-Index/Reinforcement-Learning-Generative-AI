@@ -46,14 +46,14 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-@hydra.main(config_path="/home/nkd/ouyangzl/CleanDiffuser/configs_reconstruct/adaptdiffuser/kitchen", config_name="kitchen", version_base=None)
+@hydra.main(config_path="/home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/configs_reconstruct/adaptdiffuser/kitchen", config_name="kitchen", version_base=None)
 def pipeline(args):
     # ------------------ 初始化和配置 ------------------
     set_seed(args.seed)
     device = args.device  # 例如 "cuda:0" 或 "cpu"
     
     # 保存路径
-    save_path = f"/home/nkd/ouyangzl/CleanDiffuser/Checkpoints/{args.pipeline_name}/{args.task.env_name}/"
+    save_path = f"/home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/Checkpoints/{args.pipeline_name}/{args.task.env_name}/"
     if not os.path.exists(save_path):
         os.makedirs(save_path)
         
@@ -406,7 +406,7 @@ def pipeline(args):
             # 循环直到所有环境结束或达到最大时间步 (280+1)
             while not np.all(cum_done) and t < (280 + 1):
                 # 对观测进行归一化并转换为 tensor，形状为 (num_envs, obs_dim)
-                obs_tensor = torch.tensor(normalizer.normalize(obs), device=args.device)
+                obs_tensor = torch.tensor(normalizer.normalize(obs['observation']), device=args.device)
                 # 更新先验张量第一时间步的状态部分：只更新前 obs_dim 个维度
                 prior[:, 0, :obs_dim] = obs_tensor
 
@@ -414,7 +414,7 @@ def pipeline(args):
                 # prior.repeat(args.num_candidates, 1, 1) 生成形状 (num_candidates*num_envs, horizon, obs_dim+act_dim)
                 # 采样返回的 traj 形状为 (num_candidates*num_envs, horizon, obs_dim+act_dim)
                 traj, log = agent.sample(
-                    prior.repeat(args.num_candidates, 1, 1),
+                    prior.repeat(args.num_candidates, 1, 1),  # torch.Size([64, 32, 68])
                     solver=args.solver,
                     n_samples=args.num_candidates,
                     sample_steps=args.sampling_steps,

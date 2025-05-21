@@ -3,7 +3,7 @@ defaults:
   - task: kitchen-complete-v2
 
 pipeline_name: adaptdiffuser_d4rl_kitchen
-mode: finetune
+mode: video
 seed: 0
 device: cuda:0
 
