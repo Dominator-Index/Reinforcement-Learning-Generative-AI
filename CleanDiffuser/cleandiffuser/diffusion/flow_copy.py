@@ -11,13 +11,13 @@ from cleandiffuser.utils import (
     at_least_ndim,
     cosine_beta_schedule,
     linear_beta_schedule)
-# from .basic import DiffusionModel, FlowMatching
-from basic import DiffusionModel, FlowMatching
+from .basic import DiffusionModel, FlowMatching
 import matplotlib.pyplot as plt
 import ot as pot
 import torchdyn
 from torchdyn.core import NeuralODE
 from torchdyn.datasets import generate_moons
+from torchcfm.utils import pad_t_like_x
 
 from torchcfm.conditional_flow_matching import *
 from torchcfm.models.models import *
@@ -375,7 +375,7 @@ class ConditionalFlowMatching(FlowMatching):
             condition_vec_cfg = model["condition"](condition_cfg, mask_cfg) if condition_cfg is not None else None
             condition_vec_cg = condition_cg
             
-        # 反向 Euler 迭代
+        # 4) 反向 Euler 迭代
         for i in range(sample_steps, 0, -1):
             t_val = torch.full((n_samples,), i * dt,
                            device=self.device, dtype=torch.float32)
@@ -552,21 +552,12 @@ class ExactOptimalTransportConditionalFlowMatching(ConditionalFlowMatching):
         )
         self.ot_sampler = OTPlanSampler(method="exact")
     
-    def loss(self, x_source_matched, x_target_matched, condition=None):
-        t, xt, ut = self.sample_location_and_conditional_flow(x_source_matched, x_target_matched)
-        condition = self.model["condition"](condition) if condition is not None else None
-        vt = self.model["diffusion"](xt, t, condition)
-        
-        loss = (vt - ut) ** 2
-
-        return (loss * self.loss_weight * (1 - self.fix_mask)).mean()
-    
     def update(self, x_target, condition=None, update_ema=True):
         x_source = self.sample_source(x_target, temperature=1.0)
         x_source = x_source * (1. - self.fix_mask) + x_target * self.fix_mask
         
         # 使用OT plan配对采样
-        x_source_matched, x_target_matched = self.ot_sampler.sample_plan(x_source, x_target)  # 只做一次
+        x_source_matched, x_target_matched = self.ot_sampler.sample_plan(x_source, x_target)
         loss = self.loss(x_source_matched, x_target_matched, condition=condition)
         
         loss.backward()
@@ -583,12 +574,13 @@ class ExactOptimalTransportConditionalFlowMatching(ConditionalFlowMatching):
         x_source = self.sample_source(x_target, temperature=1.0)
         x_source = x_source * (1. - self.fix_mask) + x_target * self.fix_mask
         
-        # 使用OT plan配对采样
-        x_source_matched, x_target_matched = self.ot_sampler.sample_plan(x_source, x_target)  # 只做一次
-        
+        x_source_matched, x_target_matched = self.ot_sampler.sample_plan(x_source, x_target)
         t, xt, _ = self.sample_location_and_conditional_flow(x_source_matched, x_target_matched, return_noise=False)
         
         log = self.classifier.update(xt, t, condition)
         return log
     
-   
+    def sample_location_and_conditional_flow(self, x0, x1, t=None, return_noise=False):
+        # 采样时也用OT配对
+        x0_matched, x1_matched = self.ot_sampler.sample_plan(x0, x1)
+        return super().sample_location_and_conditional_flow(x0=x0_matched, x1=x1_matched, t=t, return_noise=return_noise)

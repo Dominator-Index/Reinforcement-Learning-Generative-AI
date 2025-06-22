@@ -1,48 +1,34 @@
-
 pipeline_name: dbc_kitchen
-# env
 env_name: kitchen-all-v0
 abs_action: false
 dataset_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/dev/kitchen
-mode: inference
+mode: train
 max_episode_steps: 280
 obs_dim: 60
 action_dim: 9
 obs_steps: 2
 action_steps: 1
-# train
 device: cuda:0
 seed: 0
 gradient_steps: 1000000
 batch_size: 512
 horizon: 2
 nn: pearce_mlp
-diffusion: CFM
+diffusion: ddpm
 sample_steps: 50
 diffusion_x: true
 extra_sample_steps: 8
-# optimizer
 lr: 0.001
-# eval
-model_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/Checkpoints/dbc_kitchen/train/kitchen-all-v0/kitchen-all-v0_abs_False_pearce_mlp_CFM_sample_50_horizon_2_20250523_192424/0/models/model_final.pt
+model_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/Checkpoints/dbc/dbc_kitchen
 eval_episodes: 50
 num_envs: 10
 eval_freq: 10000
 save_video: true
-# log
 exp_name: ${env_name}_abs_${abs_action}_${nn}_${diffusion}_sample_${sample_steps}_horizon_${horizon}
-save_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/Checkpoints/
+save_path: logs
 project: CleanDiffuser
 group: dbc_kitchen
 wandb_mode: offline
 log_freq: 1000
 save_freq: 10000
 work_dir: ${save_path}/${pipeline_name}/${mode}/${env_name}/${exp_name}_${now:%Y%m%d_%H%M%S}/${seed}
-# hydra
-hydra:
-  run:
-    dir: ${work_dir}
-  job:
-    chdir: false
-
-

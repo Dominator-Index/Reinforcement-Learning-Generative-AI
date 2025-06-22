@@ -1,0 +1,8 @@
+{"time":"2025-05-23T15:17:03.513417772+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"logs/dbc_kitchen/train/kitchen-all-v0/kitchen-all-v0_abs_False_pearce_mlp_ddpm_sample_50_horizon_2_20250523_151703/0/wandb/offline-run-20250523_151703-76882eee-388b-4184-bf9a-d8ec75643be5/logs/debug-core.log"}
+{"time":"2025-05-23T15:17:03.627202647+08:00","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-05-23T15:17:03.627372384+08:00","level":"INFO","msg":"created new stream","id":"76882eee-388b-4184-bf9a-d8ec75643be5"}
+{"time":"2025-05-23T15:17:03.627412996+08:00","level":"INFO","msg":"stream: started","id":"76882eee-388b-4184-bf9a-d8ec75643be5"}
+{"time":"2025-05-23T15:17:03.627445189+08:00","level":"INFO","msg":"handler: started","stream_id":"76882eee-388b-4184-bf9a-d8ec75643be5"}
+{"time":"2025-05-23T15:17:03.62753029+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"76882eee-388b-4184-bf9a-d8ec75643be5"}
+{"time":"2025-05-23T15:17:03.627506574+08:00","level":"INFO","msg":"sender: started","stream_id":"76882eee-388b-4184-bf9a-d8ec75643be5"}
+{"time":"2025-05-23T15:17:03.644840069+08:00","level":"INFO","msg":"Starting system monitor"}

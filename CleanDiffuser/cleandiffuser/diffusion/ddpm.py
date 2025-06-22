@@ -11,7 +11,7 @@ from cleandiffuser.utils import (
     at_least_ndim,
     cosine_beta_schedule,
     linear_beta_schedule)
-from .basic import DiffusionModel
+from .basic import DiffusionModel, FlowMatching
 
 
 class DDPM(DiffusionModel):
@@ -373,3 +373,6 @@ class DDPM(DiffusionModel):
             log["log_p"] = logp
 
         return xt, log
+
+
+    

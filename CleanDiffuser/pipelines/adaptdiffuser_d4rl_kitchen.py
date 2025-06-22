@@ -1,6 +1,6 @@
 import os
 
-import d4rl
+# import d4rl
 import gym
 import hydra
 import numpy as np
@@ -17,7 +17,7 @@ from cleandiffuser.nn_diffusion import JannerUNet1d
 from cleandiffuser.utils import report_parameters
 from utils import set_seed
 
-@hydra.main(config_path="../configs/adaptdiffuser/kitchen", config_name="kitchen", version_base=None)
+@hydra.main(config_path="/home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/configs/adaptdiffuser/kitchen", config_name="kitchen", version_base=None)
 def pipeline(args):
 
     set_seed(args.seed)
@@ -134,7 +134,7 @@ def pipeline(args):
             logp = log["log_p"]
 
             # filter out low-valued trajectories
-            selected_traj = traj[logp[:, 0] > args.task.metric_value]
+            selected_traj = traj[logp[:, 0] > args.task.metric_value]    
             num_selected = selected_traj.shape[0]
             if ptr + num_selected > 50000:
                 num_selected = 50000 - ptr

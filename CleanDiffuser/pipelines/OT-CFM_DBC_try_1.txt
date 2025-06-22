@@ -1,0 +1,531 @@
+wandb: Tracking run with wandb version 0.19.11
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+/home/nkd/ouyangzl/CleanDiffuser/cleandiffuser/env/kitchen/relay_policy_learning/adept_envs/adept_envs/franka/robot/franka_robot.py:91: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  self.robot_mode[i] = read_config_from_node(root, "qpos"+str(i), "mode", int)
+/home/nkd/ouyangzl/CleanDiffuser/cleandiffuser/env/kitchen/relay_policy_learning/adept_envs/adept_envs/mujoco_env.py:90: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  if isinstance(observation, collections.Mapping):
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  0
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  1
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  2
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  3
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  4
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  5
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  6
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  7
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  8
+Reading configurations for Franka
+Initializing Franka sim
+Env seed:  9
+======================= Parameter Report of Diffusion Model =======================
+Total parameters: 823.78 k
+         fcs.1.model.0.weight: 267.26 k | Linear(in_features=522, out_features=512, bias=True)
+         fcs.2.model.0.weight: 267.26 k | Linear(in_features=522, out_features=512, bias=True)
+         fcs.0.model.0.weight: 262.14 k | Linear(in_features=512, out_features=512, bias=True)
+         ... and 15 others accounting for 27.11 k parameters
+==============================================================================
+======================= Parameter Report of Condition Model =======================
+Total parameters: 24.32 k
+         mlp.2.weight: 16.38 k | Linear(in_features=128, out_features=128, bias=True)
+         mlp.0.weight: 7.68 k | Linear(in_features=60, out_features=128, bias=True)
+         mlp.0.bias: 0.13 k | Linear(in_features=60, out_features=128, bias=True)
+         ... and 1 others accounting for 0.13 k parameters
+==============================================================================
+[0] step 0.00 / total_time 0.53 / avg_diffusion_loss 0.93
+model_0 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 0.0 Mean success: 0.0
+{'p_1': 0.0, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[0] step 0.00 / mean_step 280.00 / mean_reward 0.00 / mean_success 0.00 / p_1 0.00 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[1000] step 1000.00 / total_time 342.35 / avg_diffusion_loss 0.14
+[2000] step 2000.00 / total_time 433.73 / avg_diffusion_loss 0.11
+[3000] step 3000.00 / total_time 524.86 / avg_diffusion_loss 0.10
+[4000] step 4000.00 / total_time 614.57 / avg_diffusion_loss 0.10
+[5000] step 5000.00 / total_time 704.42 / avg_diffusion_loss 0.10
+[6000] step 6000.00 / total_time 794.53 / avg_diffusion_loss 0.09
+[7000] step 7000.00 / total_time 885.47 / avg_diffusion_loss 0.09
+[8000] step 8000.00 / total_time 978.72 / avg_diffusion_loss 0.09
+[9000] step 9000.00 / total_time 1071.95 / avg_diffusion_loss 0.09
+[10000] step 10000.00 / total_time 1164.88 / avg_diffusion_loss 0.09
+model_10000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 0.0 Mean success: 0.0
+{'p_1': 0.0, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[10000] step 10000.00 / mean_step 280.00 / mean_reward 0.00 / mean_success 0.00 / p_1 0.00 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[11000] step 11000.00 / total_time 1501.33 / avg_diffusion_loss 0.09
+[12000] step 12000.00 / total_time 1592.01 / avg_diffusion_loss 0.09
+[13000] step 13000.00 / total_time 1684.30 / avg_diffusion_loss 0.09
+[14000] step 14000.00 / total_time 1774.78 / avg_diffusion_loss 0.09
+[15000] step 15000.00 / total_time 1865.49 / avg_diffusion_loss 0.09
+[16000] step 16000.00 / total_time 1955.70 / avg_diffusion_loss 0.09
+[17000] step 17000.00 / total_time 2046.04 / avg_diffusion_loss 0.09
+[18000] step 18000.00 / total_time 2136.91 / avg_diffusion_loss 0.09
+[19000] step 19000.00 / total_time 2230.62 / avg_diffusion_loss 0.09
+[20000] step 20000.00 / total_time 2324.84 / avg_diffusion_loss 0.09
+model_20000 saved
+Evaluate model...
+Task kettle completed!
+Task kettle completed!
+[Episode 1-10] reward: [ 0. 81.  0.  0.  0.  0. 67.  0.  0.  0.] success:[0, 1, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [  0.   0.   0.   0. 152.   0.   0.   0.   0.   0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [  0.   0.   0.   0.   0.   0.   0. 134.   0.   0.] success:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 8.68 Mean success: 0.08
+{'p_1': 0.08, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[20000] step 20000.00 / mean_step 280.00 / mean_reward 8.68 / mean_success 0.08 / p_1 0.08 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[21000] step 21000.00 / total_time 2664.36 / avg_diffusion_loss 0.09
+[22000] step 22000.00 / total_time 2755.69 / avg_diffusion_loss 0.09
+[23000] step 23000.00 / total_time 2847.02 / avg_diffusion_loss 0.09
+[24000] step 24000.00 / total_time 2938.46 / avg_diffusion_loss 0.09
+[25000] step 25000.00 / total_time 3029.54 / avg_diffusion_loss 0.09
+[26000] step 26000.00 / total_time 3120.13 / avg_diffusion_loss 0.09
+[27000] step 27000.00 / total_time 3210.05 / avg_diffusion_loss 0.09
+[28000] step 28000.00 / total_time 3300.58 / avg_diffusion_loss 0.09
+[29000] step 29000.00 / total_time 3391.60 / avg_diffusion_loss 0.09
+[30000] step 30000.00 / total_time 3482.85 / avg_diffusion_loss 0.09
+model_30000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0. 59.  0.  0.  0.  0.  0.  0.  0.] success:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+Task kettle completed!
+[Episode 31-40] reward: [  0.   0.   0.   0.   0. 134.  24.  99.   0.   0.] success:[0, 0, 0, 0, 0, 1, 1, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+Task kettle completed!
+[Episode 41-50] reward: [ 22.   0.   0.   0. 111.   0.   0.   0.  95.   0.] success:[1, 0, 0, 0, 1, 0, 0, 0, 1, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 10.88 Mean success: 0.14
+{'p_1': 0.14, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[30000] step 30000.00 / mean_step 280.00 / mean_reward 10.88 / mean_success 0.14 / p_1 0.14 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[31000] step 31000.00 / total_time 3822.89 / avg_diffusion_loss 0.09
+[32000] step 32000.00 / total_time 3915.72 / avg_diffusion_loss 0.09
+[33000] step 33000.00 / total_time 4009.50 / avg_diffusion_loss 0.09
+[34000] step 34000.00 / total_time 4102.70 / avg_diffusion_loss 0.09
+[35000] step 35000.00 / total_time 4195.01 / avg_diffusion_loss 0.09
+[36000] step 36000.00 / total_time 4288.66 / avg_diffusion_loss 0.09
+[37000] step 37000.00 / total_time 4381.92 / avg_diffusion_loss 0.09
+[38000] step 38000.00 / total_time 4475.13 / avg_diffusion_loss 0.09
+[39000] step 39000.00 / total_time 4569.04 / avg_diffusion_loss 0.09
+[40000] step 40000.00 / total_time 4660.13 / avg_diffusion_loss 0.09
+model_40000 saved
+Evaluate model...
+Task kettle completed!
+Task kettle completed!
+[Episode 1-10] reward: [36.  0.  0.  0. 34.  0.  0.  0.  0.  0.] success:[1, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [  0.   0.   0.   0.   0.   0. 119.   0.   0.   0.] success:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+Task kettle completed!
+[Episode 21-30] reward: [  0.   0.   0.   0.   0.  50.  89. 111.   0.   0.] success:[0, 0, 0, 0, 0, 1, 1, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 8.78 Mean success: 0.12
+{'p_1': 0.12, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[40000] step 40000.00 / mean_step 280.00 / mean_reward 8.78 / mean_success 0.12 / p_1 0.12 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[41000] step 41000.00 / total_time 4999.07 / avg_diffusion_loss 0.09
+[42000] step 42000.00 / total_time 5089.58 / avg_diffusion_loss 0.09
+[43000] step 43000.00 / total_time 5180.20 / avg_diffusion_loss 0.09
+[44000] step 44000.00 / total_time 5270.78 / avg_diffusion_loss 0.09
+[45000] step 45000.00 / total_time 5363.89 / avg_diffusion_loss 0.09
+[46000] step 46000.00 / total_time 5458.10 / avg_diffusion_loss 0.09
+[47000] step 47000.00 / total_time 5552.26 / avg_diffusion_loss 0.09
+[48000] step 48000.00 / total_time 5642.68 / avg_diffusion_loss 0.09
+[49000] step 49000.00 / total_time 5735.12 / avg_diffusion_loss 0.09
+[50000] step 50000.00 / total_time 5827.92 / avg_diffusion_loss 0.09
+model_50000 saved
+Evaluate model...
+Task kettle completed!
+Task kettle completed!
+[Episode 1-10] reward: [115.  54.   0.   0.   0.   0.   0.   0.   0.   0.] success:[1, 1, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 11-20] reward: [ 0.  0. 86.  0.  0.  0.  0.  0.  0. 78.] success:[0, 0, 1, 0, 0, 0, 0, 0, 0, 1] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 21-30] reward: [  0.   0.   0. 125.   3.   0.   0.   0.   0.   0.] success:[0, 0, 0, 1, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [  0.   0.   0.   0.   0. 144.   0.   0.   0.   0.] success:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [ 0.  0.  0.  0.  0.  0.  0.  0. 63.  0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 13.36 Mean success: 0.16
+{'p_1': 0.16, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[50000] step 50000.00 / mean_step 280.00 / mean_reward 13.36 / mean_success 0.16 / p_1 0.16 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[51000] step 51000.00 / total_time 6167.32 / avg_diffusion_loss 0.09
+[52000] step 52000.00 / total_time 6260.84 / avg_diffusion_loss 0.09
+[53000] step 53000.00 / total_time 6352.17 / avg_diffusion_loss 0.09
+[54000] step 54000.00 / total_time 6442.19 / avg_diffusion_loss 0.09
+[55000] step 55000.00 / total_time 6532.20 / avg_diffusion_loss 0.09
+[56000] step 56000.00 / total_time 6622.44 / avg_diffusion_loss 0.09
+[57000] step 57000.00 / total_time 6712.78 / avg_diffusion_loss 0.09
+[58000] step 58000.00 / total_time 6803.66 / avg_diffusion_loss 0.09
+[59000] step 59000.00 / total_time 6894.19 / avg_diffusion_loss 0.09
+[60000] step 60000.00 / total_time 6985.72 / avg_diffusion_loss 0.09
+model_60000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0.  0.  0.  0.  0.  0.  0.  0. 56.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 1] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [  0.   0.   0.   0.   0.   0. 122.   0.   0.   0.] success:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [ 0.  0.  0.  0.  0.  0.  0.  0. 86.  0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 5.28 Mean success: 0.06
+{'p_1': 0.06, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[60000] step 60000.00 / mean_step 280.00 / mean_reward 5.28 / mean_success 0.06 / p_1 0.06 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[61000] step 61000.00 / total_time 7323.15 / avg_diffusion_loss 0.09
+[62000] step 62000.00 / total_time 7414.84 / avg_diffusion_loss 0.09
+[63000] step 63000.00 / total_time 7506.12 / avg_diffusion_loss 0.09
+[64000] step 64000.00 / total_time 7598.42 / avg_diffusion_loss 0.09
+[65000] step 65000.00 / total_time 7692.34 / avg_diffusion_loss 0.09
+[66000] step 66000.00 / total_time 7785.16 / avg_diffusion_loss 0.09
+[67000] step 67000.00 / total_time 7876.22 / avg_diffusion_loss 0.09
+[68000] step 68000.00 / total_time 7967.19 / avg_diffusion_loss 0.09
+[69000] step 69000.00 / total_time 8058.11 / avg_diffusion_loss 0.08
+[70000] step 70000.00 / total_time 8149.07 / avg_diffusion_loss 0.08
+model_70000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 5. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0. 61.  0.  0.  0.  0.  0.  0.  0.] success:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [139.   0.   0.   0.   0.   0.   0.   0.   0.   0.] success:[1, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 4.1 Mean success: 0.06
+{'p_1': 0.06, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[70000] step 70000.00 / mean_step 280.00 / mean_reward 4.10 / mean_success 0.06 / p_1 0.06 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[71000] step 71000.00 / total_time 8486.97 / avg_diffusion_loss 0.09
+[72000] step 72000.00 / total_time 8577.45 / avg_diffusion_loss 0.09
+[73000] step 73000.00 / total_time 8667.21 / avg_diffusion_loss 0.08
+[74000] step 74000.00 / total_time 8757.25 / avg_diffusion_loss 0.09
+[75000] step 75000.00 / total_time 8847.75 / avg_diffusion_loss 0.09
+[76000] step 76000.00 / total_time 8940.06 / avg_diffusion_loss 0.08
+[77000] step 77000.00 / total_time 9032.25 / avg_diffusion_loss 0.09
+[78000] step 78000.00 / total_time 9122.68 / avg_diffusion_loss 0.08
+[79000] step 79000.00 / total_time 9213.05 / avg_diffusion_loss 0.09
+[80000] step 80000.00 / total_time 9303.41 / avg_diffusion_loss 0.09
+model_80000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [  0.   0.   0.   0.   0.   0.   0.   0. 103.   0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [ 0.  0.  0.  0.  0.  0. 65.  0.  0.  0.] success:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [ 0.  0.  0.  0.  0.  0.  0. 72.  0.  0.] success:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [  0. 125.   0.   0.   0.   0.   0.   0.   0.   0.] success:[0, 1, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 7.3 Mean success: 0.08
+{'p_1': 0.08, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[80000] step 80000.00 / mean_step 280.00 / mean_reward 7.30 / mean_success 0.08 / p_1 0.08 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[81000] step 81000.00 / total_time 9639.31 / avg_diffusion_loss 0.08
+[82000] step 82000.00 / total_time 9729.57 / avg_diffusion_loss 0.08
+[83000] step 83000.00 / total_time 9819.79 / avg_diffusion_loss 0.08
+[84000] step 84000.00 / total_time 9909.96 / avg_diffusion_loss 0.09
+[85000] step 85000.00 / total_time 10000.53 / avg_diffusion_loss 0.09
+[86000] step 86000.00 / total_time 10090.38 / avg_diffusion_loss 0.08
+[87000] step 87000.00 / total_time 10181.52 / avg_diffusion_loss 0.08
+[88000] step 88000.00 / total_time 10272.93 / avg_diffusion_loss 0.08
+[89000] step 89000.00 / total_time 10366.77 / avg_diffusion_loss 0.08
+[90000] step 90000.00 / total_time 10459.23 / avg_diffusion_loss 0.08
+model_90000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [  0.   0.   0. 123.   0.   0.   0.   0.   0.   0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 21-30] reward: [  0. 109.   0.   0.   0.  91.   0.   0.   0.   0.] success:[0, 1, 0, 0, 0, 1, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[1, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 6.64 Mean success: 0.08
+{'p_1': 0.08, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[90000] step 90000.00 / mean_step 280.00 / mean_reward 6.64 / mean_success 0.08 / p_1 0.08 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[91000] step 91000.00 / total_time 10797.35 / avg_diffusion_loss 0.08
+[92000] step 92000.00 / total_time 10891.28 / avg_diffusion_loss 0.08
+[93000] step 93000.00 / total_time 10984.52 / avg_diffusion_loss 0.08
+[94000] step 94000.00 / total_time 11080.70 / avg_diffusion_loss 0.08
+[95000] step 95000.00 / total_time 11174.73 / avg_diffusion_loss 0.08
+[96000] step 96000.00 / total_time 11267.33 / avg_diffusion_loss 0.08
+[97000] step 97000.00 / total_time 11358.91 / avg_diffusion_loss 0.08
+[98000] step 98000.00 / total_time 11451.17 / avg_diffusion_loss 0.09
+[99000] step 99000.00 / total_time 11542.96 / avg_diffusion_loss 0.08
+[100000] step 100000.00 / total_time 11634.05 / avg_diffusion_loss 0.08
+model_100000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [  0.   0.   0.   0. 117.   0.   0.   0.   0.   0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [  0.   0.   0.   0.   0.   0.   0.   0.   0. 121.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 1] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 31-40] reward: [ 0. 32.  0.  0. 71.  0.  0.  0.  0.  0.] success:[0, 1, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [  0.   0.   0.   0. 162.   0.   0.   0.   0.   0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 10.06 Mean success: 0.1
+{'p_1': 0.1, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[100000] step 100000.00 / mean_step 280.00 / mean_reward 10.06 / mean_success 0.10 / p_1 0.10 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[101000] step 101000.00 / total_time 11972.81 / avg_diffusion_loss 0.08
+[102000] step 102000.00 / total_time 12063.39 / avg_diffusion_loss 0.08
+[103000] step 103000.00 / total_time 12153.73 / avg_diffusion_loss 0.08
+[104000] step 104000.00 / total_time 12244.24 / avg_diffusion_loss 0.08
+[105000] step 105000.00 / total_time 12335.70 / avg_diffusion_loss 0.08
+[106000] step 106000.00 / total_time 12427.72 / avg_diffusion_loss 0.08
+[107000] step 107000.00 / total_time 12520.03 / avg_diffusion_loss 0.08
+[108000] step 108000.00 / total_time 12612.42 / avg_diffusion_loss 0.08
+[109000] step 109000.00 / total_time 12704.82 / avg_diffusion_loss 0.08
+[110000] step 110000.00 / total_time 12797.71 / avg_diffusion_loss 0.08
+model_110000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [ 0.  0.  0. 90.  0.  0.  0.  0.  0.  0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0.  0.  0.  0. 47.  0.  0.  0.  0.] success:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 2.74 Mean success: 0.04
+{'p_1': 0.04, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[110000] step 110000.00 / mean_step 280.00 / mean_reward 2.74 / mean_success 0.04 / p_1 0.04 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[111000] step 111000.00 / total_time 13139.63 / avg_diffusion_loss 0.08
+[112000] step 112000.00 / total_time 13230.74 / avg_diffusion_loss 0.08
+[113000] step 113000.00 / total_time 13321.60 / avg_diffusion_loss 0.08
+[114000] step 114000.00 / total_time 13412.65 / avg_diffusion_loss 0.08
+[115000] step 115000.00 / total_time 13503.60 / avg_diffusion_loss 0.08
+[116000] step 116000.00 / total_time 13596.09 / avg_diffusion_loss 0.08
+[117000] step 117000.00 / total_time 13686.80 / avg_diffusion_loss 0.08
+[118000] step 118000.00 / total_time 13777.87 / avg_diffusion_loss 0.08
+[119000] step 119000.00 / total_time 13869.48 / avg_diffusion_loss 0.08
+[120000] step 120000.00 / total_time 13960.70 / avg_diffusion_loss 0.08
+model_120000 saved
+Evaluate model...
+Task kettle completed!
+Task kettle completed!
+[Episode 1-10] reward: [ 0.  0.  0.  0.  0.  0. 30. 14.  0.  0.] success:[0, 0, 0, 0, 0, 0, 1, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [ 0.  0.  0.  0.  0. 55.  0.  0.  0.  0.] success:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 1.98 Mean success: 0.06
+{'p_1': 0.06, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[120000] step 120000.00 / mean_step 280.00 / mean_reward 1.98 / mean_success 0.06 / p_1 0.06 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[121000] step 121000.00 / total_time 14300.68 / avg_diffusion_loss 0.08
+[122000] step 122000.00 / total_time 14393.46 / avg_diffusion_loss 0.08
+[123000] step 123000.00 / total_time 14484.50 / avg_diffusion_loss 0.08
+[124000] step 124000.00 / total_time 14575.72 / avg_diffusion_loss 0.08
+[125000] step 125000.00 / total_time 14666.92 / avg_diffusion_loss 0.08
+[126000] step 126000.00 / total_time 14757.91 / avg_diffusion_loss 0.08
+[127000] step 127000.00 / total_time 14849.53 / avg_diffusion_loss 0.08
+[128000] step 128000.00 / total_time 14940.31 / avg_diffusion_loss 0.08
+[129000] step 129000.00 / total_time 15031.10 / avg_diffusion_loss 0.08
+[130000] step 130000.00 / total_time 15121.81 / avg_diffusion_loss 0.08
+model_130000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [ 0.  0.  0.  0. 50.  0.  0.  0.  0.  0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+Task kettle completed!
+Task kettle completed!
+[Episode 21-30] reward: [ 76.   0.   0.   0.  82. 106.   0.   0.  59.   0.] success:[1, 0, 0, 0, 1, 1, 0, 0, 1, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 31-40] reward: [ 0.  0. 28.  0.  0.  0.  0.  0.  0. 90.] success:[0, 0, 1, 0, 0, 0, 0, 0, 0, 1] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [ 0. 81.  0.  0.  0.  0.  0.  0.  0.  0.] success:[0, 1, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 11.44 Mean success: 0.16
+{'p_1': 0.16, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[130000] step 130000.00 / mean_step 280.00 / mean_reward 11.44 / mean_success 0.16 / p_1 0.16 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[131000] step 131000.00 / total_time 15459.91 / avg_diffusion_loss 0.08
+[132000] step 132000.00 / total_time 15550.92 / avg_diffusion_loss 0.08
+[133000] step 133000.00 / total_time 15642.15 / avg_diffusion_loss 0.08
+[134000] step 134000.00 / total_time 15733.08 / avg_diffusion_loss 0.08
+[135000] step 135000.00 / total_time 15824.17 / avg_diffusion_loss 0.08
+[136000] step 136000.00 / total_time 15914.58 / avg_diffusion_loss 0.08
+[137000] step 137000.00 / total_time 16004.63 / avg_diffusion_loss 0.08
+[138000] step 138000.00 / total_time 16095.01 / avg_diffusion_loss 0.08
+[139000] step 139000.00 / total_time 16184.94 / avg_diffusion_loss 0.08
+[140000] step 140000.00 / total_time 16272.56 / avg_diffusion_loss 0.08
+model_140000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [  0.   0.   0.   0.   0.   0.   0.   0.   0. 170.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 1] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0.  0.  0.  0. 24.  0.  0.  0.  0.] success:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [ 0.  0.  0. 34.  0.  0.  0.  0.  0.  0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+Task kettle completed!
+[Episode 41-50] reward: [  0.   0.   0. 110.   0.   0.   0.   0. 104.   0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 8.84 Mean success: 0.1
+{'p_1': 0.1, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[140000] step 140000.00 / mean_step 280.00 / mean_reward 8.84 / mean_success 0.10 / p_1 0.10 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[141000] step 141000.00 / total_time 16609.12 / avg_diffusion_loss 0.08
+[142000] step 142000.00 / total_time 16703.25 / avg_diffusion_loss 0.08
+[143000] step 143000.00 / total_time 16797.19 / avg_diffusion_loss 0.08
+[144000] step 144000.00 / total_time 16887.91 / avg_diffusion_loss 0.08
+[145000] step 145000.00 / total_time 16978.28 / avg_diffusion_loss 0.08
+[146000] step 146000.00 / total_time 17068.03 / avg_diffusion_loss 0.08
+[147000] step 147000.00 / total_time 17158.05 / avg_diffusion_loss 0.08
+[148000] step 148000.00 / total_time 17248.00 / avg_diffusion_loss 0.08
+[149000] step 149000.00 / total_time 17337.91 / avg_diffusion_loss 0.08
+[150000] step 150000.00 / total_time 17427.80 / avg_diffusion_loss 0.08
+model_150000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [  0.   0.   0.   0. 162.   0.   0.   0.   0.   0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [ 0.  0.  0.  0.  0.  0.  0. 26.  0.  0.] success:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0.  0. 70.  0.  0.  0.  0.  0.  0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [49.  0.  0.  0.  0.  0.  0.  0.  0.  0.] success:[1, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [  0.   0. 114.   0.   0.   0.   0.   0.   0.   0.] success:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 8.42 Mean success: 0.1
+{'p_1': 0.1, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[150000] step 150000.00 / mean_step 280.00 / mean_reward 8.42 / mean_success 0.10 / p_1 0.10 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[151000] step 151000.00 / total_time 17764.73 / avg_diffusion_loss 0.08
+[152000] step 152000.00 / total_time 17855.46 / avg_diffusion_loss 0.08
+[153000] step 153000.00 / total_time 17946.82 / avg_diffusion_loss 0.08
+[154000] step 154000.00 / total_time 18036.42 / avg_diffusion_loss 0.08
+[155000] step 155000.00 / total_time 18126.87 / avg_diffusion_loss 0.08
+[156000] step 156000.00 / total_time 18216.85 / avg_diffusion_loss 0.08
+[157000] step 157000.00 / total_time 18307.12 / avg_diffusion_loss 0.08
+[158000] step 158000.00 / total_time 18397.56 / avg_diffusion_loss 0.08
+[159000] step 159000.00 / total_time 18488.08 / avg_diffusion_loss 0.08
+[160000] step 160000.00 / total_time 18580.20 / avg_diffusion_loss 0.08
+model_160000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [ 0.  0.  0.  0. 86.  0.  0.  0.  0.  0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 11-20] reward: [  0.   0.   0.   0.   0.   0. 108.   0.   0.   0.] success:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 21-30] reward: [ 0.  0.  0. 25.  0.  0.  0.  0.  0.  0.] success:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [  0.   0.   0.   0.   0.   0.   0. 161.   0.   0.] success:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 7.6 Mean success: 0.08
+{'p_1': 0.08, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[160000] step 160000.00 / mean_step 280.00 / mean_reward 7.60 / mean_success 0.08 / p_1 0.08 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[161000] step 161000.00 / total_time 18913.81 / avg_diffusion_loss 0.08
+[162000] step 162000.00 / total_time 19004.91 / avg_diffusion_loss 0.08
+[163000] step 163000.00 / total_time 19096.19 / avg_diffusion_loss 0.08
+[164000] step 164000.00 / total_time 19187.27 / avg_diffusion_loss 0.08
+[165000] step 165000.00 / total_time 19278.94 / avg_diffusion_loss 0.08
+[166000] step 166000.00 / total_time 19371.32 / avg_diffusion_loss 0.08
+[167000] step 167000.00 / total_time 19462.60 / avg_diffusion_loss 0.08
+[168000] step 168000.00 / total_time 19554.87 / avg_diffusion_loss 0.08
+[169000] step 169000.00 / total_time 19645.78 / avg_diffusion_loss 0.08
+[170000] step 170000.00 / total_time 19735.85 / avg_diffusion_loss 0.08
+model_170000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 41-50] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 0.0 Mean success: 0.0
+{'p_1': 0.0, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[170000] step 170000.00 / mean_step 280.00 / mean_reward 0.00 / mean_success 0.00 / p_1 0.00 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[171000] step 171000.00 / total_time 20073.18 / avg_diffusion_loss 0.08
+[172000] step 172000.00 / total_time 20163.72 / avg_diffusion_loss 0.08
+[173000] step 173000.00 / total_time 20256.44 / avg_diffusion_loss 0.08
+[174000] step 174000.00 / total_time 20350.40 / avg_diffusion_loss 0.08
+[175000] step 175000.00 / total_time 20442.92 / avg_diffusion_loss 0.08
+[176000] step 176000.00 / total_time 20534.11 / avg_diffusion_loss 0.08
+[177000] step 177000.00 / total_time 20623.97 / avg_diffusion_loss 0.08
+[178000] step 178000.00 / total_time 20714.12 / avg_diffusion_loss 0.08
+[179000] step 179000.00 / total_time 20804.26 / avg_diffusion_loss 0.08
+[180000] step 180000.00 / total_time 20894.47 / avg_diffusion_loss 0.08
+model_180000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 31-40] reward: [  0.   0.   0.   0. 113.   0.   0.   0.   0.   0.] success:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [  0.   0.   0.   0.   0.   0.   0.   0. 138.   0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 5.02 Mean success: 0.04
+{'p_1': 0.04, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[180000] step 180000.00 / mean_step 280.00 / mean_reward 5.02 / mean_success 0.04 / p_1 0.04 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[181000] step 181000.00 / total_time 21230.23 / avg_diffusion_loss 0.08
+[182000] step 182000.00 / total_time 21320.64 / avg_diffusion_loss 0.08
+[183000] step 183000.00 / total_time 21410.94 / avg_diffusion_loss 0.08
+[184000] step 184000.00 / total_time 21501.12 / avg_diffusion_loss 0.08
+[185000] step 185000.00 / total_time 21591.47 / avg_diffusion_loss 0.08
+[186000] step 186000.00 / total_time 21681.99 / avg_diffusion_loss 0.08
+[187000] step 187000.00 / total_time 21771.25 / avg_diffusion_loss 0.08
+[188000] step 188000.00 / total_time 21860.78 / avg_diffusion_loss 0.08
+[189000] step 189000.00 / total_time 21953.16 / avg_diffusion_loss 0.08
+[190000] step 190000.00 / total_time 22046.47 / avg_diffusion_loss 0.08
+model_190000 saved
+Evaluate model...
+[Episode 1-10] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 31-40] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Task kettle completed!
+[Episode 41-50] reward: [ 0. 43.  0.  0.  0.  0.  0.  0.  0.  0.] success:[0, 1, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+Mean step: 280.0 Mean reward: 0.86 Mean success: 0.02
+{'p_1': 0.02, 'p_2': 0.0, 'p_3': 0.0, 'p_4': 0.0, 'p_5': 0.0, 'p_6': 0.0, 'p_7': 0.0}
+[190000] step 190000.00 / mean_step 280.00 / mean_reward 0.86 / mean_success 0.02 / p_1 0.02 / p_2 0.00 / p_3 0.00 / p_4 0.00 / p_5 0.00 / p_6 0.00 / p_7 0.00
+[191000] step 191000.00 / total_time 22384.59 / avg_diffusion_loss 0.08
+[192000] step 192000.00 / total_time 22474.75 / avg_diffusion_loss 0.08
+[193000] step 193000.00 / total_time 22565.09 / avg_diffusion_loss 0.08
+[194000] step 194000.00 / total_time 22655.49 / avg_diffusion_loss 0.08
+[195000] step 195000.00 / total_time 22745.55 / avg_diffusion_loss 0.08
+[196000] step 196000.00 / total_time 22835.90 / avg_diffusion_loss 0.08
+[197000] step 197000.00 / total_time 22926.56 / avg_diffusion_loss 0.08
+[198000] step 198000.00 / total_time 23017.96 / avg_diffusion_loss 0.08
+[199000] step 199000.00 / total_time 23108.84 / avg_diffusion_loss 0.08
+[200000] step 200000.00 / total_time 23199.72 / avg_diffusion_loss 0.08
+model_200000 saved
+Evaluate model...
+Task kettle completed!
+[Episode 1-10] reward: [ 0.  0.  0.  0.  0.  0. 58.  0.  0.  0.] success:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 11-20] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]
+[Episode 21-30] reward: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.] success:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kit_success:[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]

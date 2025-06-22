@@ -6,6 +6,12 @@ import sys
 import warnings
 warnings.filterwarnings('ignore')
 
+import sys
+sys.path.append("/home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/cleandiffuser/diffusion")
+
+import flow 
+from flow import ConditionalFlowMatching, ExactOptimalTransportConditionalFlowMatching
+        
 import gym
 import pathlib
 import time
@@ -22,12 +28,21 @@ from cleandiffuser.env.utils import VideoRecorder
 from cleandiffuser.dataset.kitchen_dataset import KitchenDataset, KitchenMjlDataset
 from cleandiffuser.dataset.dataset_utils import loop_dataloader
 from cleandiffuser.utils import report_parameters
-from fractions import Fraction
+from fractions import Fraction        
+
+
 
 def make_env(args, idx):
     def thunk():
         env = gym.make(args.env_name, use_abs_action=args.abs_action)  
-        env = KitchenLowdimWrapper(env=env, init_qpos=None, init_qvel=None, render_hw=(240, 360))
+        env = KitchenLowdimWrapper(env=env, init_qpos=None, init_qvel=None, render_hw=(240, 360))   
+        
+        # 确保视频目录存在
+        video_dir = "/home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/videos"
+        os.makedirs(video_dir, exist_ok=True)
+        
+        # 每个环境保存为不同的视频文件
+        video_file = os.path.join(video_dir, f"OT-CFM_env_{idx}_video.mp4")
         video_recorder = VideoRecorder.create_h264(
                             fps=Fraction(25, 2),  # 12.5 as Fraction to avoid PyAV bug
                             codec='h264',
@@ -36,7 +51,9 @@ def make_env(args, idx):
                             thread_type='FRAME',
                             thread_count=1
                         )
-        env = VideoRecordingWrapper(env, video_recorder, file_path=None, steps_per_render=1)
+        
+        # 显式设置文件路径
+        env = VideoRecordingWrapper(env, video_recorder, file_path=video_file, steps_per_render=1)
         env = MultiStepWrapper(env, n_obs_steps=args.obs_steps, n_action_steps=args.action_steps, max_episode_steps=args.max_episode_steps)
         env.seed(args.seed+idx)
         print("Env seed: ", args.seed+idx)
@@ -58,7 +75,7 @@ def inference(args, envs, dataset, agent, logger):
     elif args.diffusion == "ddim":
         solver = "ddim"
     elif args.diffusion == "dpm":
-        solver = "ode_dpmpp_2"
+        solver = "ode_dpmpp"
     elif args.diffusion == "edm":
         solver = "euler"
         
@@ -92,7 +109,7 @@ def inference(args, envs, dataset, agent, logger):
                     naction, _ = agent.sample(prior=prior, n_samples=args.num_envs, sample_steps=args.sample_steps, solver=solver,
                                         condition_cfg=condition, w_cfg=1.0, use_ema=True)
                 else:
-                    naction, _ = agent.sample_x(prior=prior, n_samples=args.num_envs, sample_steps=args.sample_steps, solver=solver,
+                    naction, _ = agent.sample_x(prior=prior, n_samples=args.num_envs, sample_steps=args.sample_steps,
                                         condition_cfg=condition, w_cfg=1.0, use_ema=True, extra_sample_steps=args.extra_sample_steps)
             # unnormalize prediction
             naction = naction.detach().to('cpu').clip(-1., 1.).numpy()  # (num_envs, action_steps, action_dim)
@@ -178,9 +195,8 @@ def pipeline(args):
     report_parameters(nn_condition, topk=3)
     print(f"==============================================================================")
 
-    if args.diffusion == "ddpm":
-        from cleandiffuser.diffusion.ddpm import DDPM
-        agent = DDPM(
+    if args.diffusion == "CFM":
+        agent = ConditionalFlowMatching(
             nn_diffusion=nn_diffusion, nn_condition=nn_condition, device=args.device,
             diffusion_steps=args.sample_steps, ema_rate=0.9999,
             optim_params={"lr": args.lr})

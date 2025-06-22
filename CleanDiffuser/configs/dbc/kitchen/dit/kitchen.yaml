@@ -3,7 +3,7 @@ pipeline_name: dbc_kitchen
 # env
 env_name: kitchen-all-v0
 abs_action: false
-dataset_path: dev/kitchen
+dataset_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/dev/kitchen
 mode: train
 max_episode_steps: 280
 obs_dim: 60
@@ -24,10 +24,10 @@ extra_sample_steps: 8
 # optimizer
 lr: 5e-4
 # eval
-model_path: path/to/model
+model_path: /home/nkd/ouyangzl/Reinforcement-Learning-Generative-AI/CleanDiffuser/Checkpoints/dbc/dbc_kitchen
 eval_episodes: 50
 num_envs: 10
-eval_freq: 100000
+eval_freq: 10000
 save_video: true
 # log
 exp_name: ${env_name}_abs_${abs_action}_${nn}_${diffusion}_sample_${sample_steps}_horizon_${horizon}
@@ -35,8 +35,8 @@ save_path: logs
 project: CleanDiffuser
 group: dbc_kitchen
 wandb_mode: offline
-log_freq: 1000
-save_freq: 100000
+log_freq: 10000
+save_freq: 10000
 work_dir: ${save_path}/${pipeline_name}/${mode}/${env_name}/${exp_name}_${now:%Y%m%d_%H%M%S}/${seed}
 # hydra
 hydra:
